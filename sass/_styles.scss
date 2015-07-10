@@ -1,0 +1,192 @@
+
+#wrapper {
+	width: 1024px;
+	margin: 40px auto;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+select {
+	padding: 5px 2px;
+	margin-bottom: 20px;
+}
+
+h1 {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+h2 {
+	margin: 20px auto;
+	padding: 10px;
+	text-transform: uppercase;
+	background: #333;
+	color: #fff;
+	border-bottom: 1px solid #333;
+	font-weight: bold;
+	width: 70%;
+}
+
+
+label {
+	margin-right: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+input[type="text"] {
+	padding: 5px;
+	margin-right: 15px;
+}
+
+[class*="color-picker"] {
+	margin-left: 15px;
+}
+
+button {
+	margin-top: 30px;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	background: lightgreen;
+	font-weight: bold;
+	border: 2px solid darkgreen;
+	transition: all .3s;
+}
+
+button:hover {
+	opacity: .8;
+	cursor: pointer;
+}
+
+.row {
+	margin-top: -2px;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+[class*="box"] {
+	width: 50px;
+	height: 50px;
+	position: relative;
+	border-right: $border-width solid transparent;
+	border-bottom: $border-width solid transparent;
+	display: inline-block;
+	transition: all .2s;
+	/*! The JavaScript looks to the rgba color to be sure the square isn't already claimed. */
+	background-color: rgba(0, 0, 0, 0);
+	.row:first-of-type & {
+		border-top: $border-width solid transparent;
+	}
+	&:first-child {
+		border-left: $border-width solid transparent;
+	}
+}
+
+.dot {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: $dot-color;
+	&.bottom {
+		bottom: -3px;
+	}
+	&.top {
+		top: -3px;
+	}
+
+	&.left {
+		left: -2px;
+	}
+
+	&.right {
+		right: -3px;
+	}
+}
+
+// These are the sensor divs so the program knows where you are inside each box
+
+.sensorX {
+	position: absolute;
+	height: 20%;
+	width: 80%;
+	left: 10px;
+	z-index: 1000;
+}
+
+.sensorY {
+	position: absolute;		
+	height: 80%;
+	width: 20%;
+	top: 10px;
+	z-index: 1000;
+}
+
+.sensor1 {
+	top: -10px;
+}
+
+.sensor2 {
+	right: -10px;
+}
+
+.sensor3 {
+	bottom: -10px;
+}
+
+.sensor4 {
+	left: -10px;
+}
+
+// Leave separate in case I ever want separate hover/chosen colors
+// Leave #wrapper for specificity reasons
+
+@each $position in top right bottom left {
+   #wrapper .hover-border-#{$position} {
+  border-#{$position}: $border-width solid $hover-border-color;
+  }
+}
+
+@each $position in top right bottom left {
+   #wrapper .choose-border-#{$position} {
+   border-#{$position}: $border-width solid $choose-border-color;
+  }
+}
+
+#scoreboard {
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+[class*="player"] {
+	margin-right: 15px;
+	margin-left: 15px;
+	padding: 20px;
+	color: #333;
+	text-transform: uppercase;
+	display: inline-block;
+	border: 5px solid #fff;
+	border-radius: 3px;
+	transition: all .3s;
+	span {
+	display: block;
+	font-size: 3em;
+	}
+}
+
+#winner {
+	margin-top: 40px;
+	padding: 20px;
+	text-transform: uppercase;
+	color: $winner-text;
+	background: $winner-background;
+	font-weight: bold;
+}
+
+// Good to leave for debugging purposes
+[class*="sensor"] {
+	background: none;
+}

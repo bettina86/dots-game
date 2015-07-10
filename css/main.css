@@ -1,0 +1,301 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 2, ../sass/_styles.scss */
+#wrapper {
+  width: 1024px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 9, ../sass/_styles.scss */
+select {
+  padding: 5px 2px;
+  margin-bottom: 20px;
+}
+
+/* line 14, ../sass/_styles.scss */
+h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+/* line 20, ../sass/_styles.scss */
+h2 {
+  margin: 20px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  background: #333;
+  color: #fff;
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  width: 70%;
+}
+
+/* line 32, ../sass/_styles.scss */
+label {
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+/* line 39, ../sass/_styles.scss */
+input[type="text"] {
+  padding: 5px;
+  margin-right: 15px;
+}
+
+/* line 44, ../sass/_styles.scss */
+[class*="color-picker"] {
+  margin-left: 15px;
+}
+
+/* line 48, ../sass/_styles.scss */
+button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  background: lightgreen;
+  font-weight: bold;
+  border: 2px solid darkgreen;
+  transition: all .3s;
+}
+
+/* line 58, ../sass/_styles.scss */
+button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+/* line 63, ../sass/_styles.scss */
+.row {
+  margin-top: -2px;
+}
+/* line 65, ../sass/_styles.scss */
+.row:first-of-type {
+  margin-top: 0;
+}
+
+/* line 70, ../sass/_styles.scss */
+[class*="box"] {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  transition: all .2s;
+  /*! The JavaScript looks to the rgba color to be sure the square isn't already claimed. */
+  background-color: transparent;
+}
+/* line 80, ../sass/_styles.scss */
+.row:first-of-type [class*="box"] {
+  border-top: 2px solid transparent;
+}
+/* line 83, ../sass/_styles.scss */
+[class*="box"]:first-child {
+  border-left: 2px solid transparent;
+}
+
+/* line 88, ../sass/_styles.scss */
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #333;
+}
+/* line 94, ../sass/_styles.scss */
+.dot.bottom {
+  bottom: -3px;
+}
+/* line 97, ../sass/_styles.scss */
+.dot.top {
+  top: -3px;
+}
+/* line 101, ../sass/_styles.scss */
+.dot.left {
+  left: -2px;
+}
+/* line 105, ../sass/_styles.scss */
+.dot.right {
+  right: -3px;
+}
+
+/* line 112, ../sass/_styles.scss */
+.sensorX {
+  position: absolute;
+  height: 20%;
+  width: 80%;
+  left: 10px;
+  z-index: 1000;
+}
+
+/* line 120, ../sass/_styles.scss */
+.sensorY {
+  position: absolute;
+  height: 80%;
+  width: 20%;
+  top: 10px;
+  z-index: 1000;
+}
+
+/* line 128, ../sass/_styles.scss */
+.sensor1 {
+  top: -10px;
+}
+
+/* line 132, ../sass/_styles.scss */
+.sensor2 {
+  right: -10px;
+}
+
+/* line 136, ../sass/_styles.scss */
+.sensor3 {
+  bottom: -10px;
+}
+
+/* line 140, ../sass/_styles.scss */
+.sensor4 {
+  left: -10px;
+}
+
+/* line 148, ../sass/_styles.scss */
+#wrapper .hover-border-top {
+  border-top: 2px solid #333;
+}
+
+/* line 148, ../sass/_styles.scss */
+#wrapper .hover-border-right {
+  border-right: 2px solid #333;
+}
+
+/* line 148, ../sass/_styles.scss */
+#wrapper .hover-border-bottom {
+  border-bottom: 2px solid #333;
+}
+
+/* line 148, ../sass/_styles.scss */
+#wrapper .hover-border-left {
+  border-left: 2px solid #333;
+}
+
+/* line 154, ../sass/_styles.scss */
+#wrapper .choose-border-top {
+  border-top: 2px solid #333;
+}
+
+/* line 154, ../sass/_styles.scss */
+#wrapper .choose-border-right {
+  border-right: 2px solid #333;
+}
+
+/* line 154, ../sass/_styles.scss */
+#wrapper .choose-border-bottom {
+  border-bottom: 2px solid #333;
+}
+
+/* line 154, ../sass/_styles.scss */
+#wrapper .choose-border-left {
+  border-left: 2px solid #333;
+}
+
+/* line 159, ../sass/_styles.scss */
+#scoreboard {
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+/* line 164, ../sass/_styles.scss */
+[class*="player"] {
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 20px;
+  color: #333;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 5px solid #fff;
+  border-radius: 3px;
+  transition: all .3s;
+}
+/* line 174, ../sass/_styles.scss */
+[class*="player"] span {
+  display: block;
+  font-size: 3em;
+}
+
+/* line 180, ../sass/_styles.scss */
+#winner {
+  margin-top: 40px;
+  padding: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #333;
+  font-weight: bold;
+}
+
+/* line 190, ../sass/_styles.scss */
+[class*="sensor"] {
+  background: none;
+}

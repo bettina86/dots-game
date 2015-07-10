@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Dots</title>
+  <meta name="description" content="Dots">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+	<h1>The Dots Game</h1>
+	<section id="game-setup">
+			<form>
+				<label for="number-of-players">Number of Players: </label>
+				<select id="number-of-players">
+					<option value="0"></option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<div id="player-inputs"></div>
+			</form>
+			<button id="start-button">Start Game</button>
+	</section>
+
+	<div id="gameboard"></div>
+	<div id="scoreboard"></div>
+  	<script>
+  		$("#gameboard").hide();
+  		$("#scoreboard").hide();
+  		$("#player-inputs").hide()
+	</script>
+</div>
+  <script src="js/app.js"></script> 
+</body>
+</html>
